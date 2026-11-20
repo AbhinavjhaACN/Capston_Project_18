@@ -1,0 +1,22 @@
+name: GitOps Apply
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+
+jobs:
+  terraform-apply:
+    if: github.event.pull_request.merged == true
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Simulate Terraform Apply
+        run: |
+          echo "Terraform Apply Executed Successfully"
