@@ -1,3 +1,6 @@
+# Project 18 GitOps Update
+# Project 18 GitOps Update
+
 variable "aws_region" {
   default = "ap-south-1"
 }
